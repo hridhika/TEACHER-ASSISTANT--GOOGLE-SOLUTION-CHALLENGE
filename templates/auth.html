@@ -1,0 +1,45 @@
+{% include 'header.html' %}
+
+<body style="margin: 0; padding: 0; background: linear-gradient(to bottom right, #f0f4f8, #ffffff);">
+
+<div style="min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+
+    <h1 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #2c3e50; margin-bottom: 30px;">
+        Welcome to the Portal
+    </h1>
+
+    <form method="post" enctype="multipart/form-data" 
+        style="width: 100%; max-width: 420px; background: #ffffff; padding: 30px; border-radius: 12px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05); font-family: 'Segoe UI', sans-serif;">
+
+        {% csrf_token %}
+
+        <label for="username" style="display: block; margin-bottom: 6px; color: #34495e; font-weight: 500;">Username</label>
+        <input type="text" id="username" name="username" required 
+               style="width: 100%; padding: 12px; margin-bottom: 18px; border: 1px solid #ccc; border-radius: 6px; font-size: 15px;">
+
+        <label for="password" style="display: block; margin-bottom: 6px; color: #34495e; font-weight: 500;">Password</label>
+        <input type="password" id="password" name="password" required 
+               style="width: 100%; padding: 12px; margin-bottom: 24px; border: 1px solid #ccc; border-radius: 6px; font-size: 15px;">
+
+        <div style="display: flex; justify-content: space-between;">
+            <button type="submit" name="login" 
+                    style="flex: 1; margin-right: 10px; padding: 12px; background-color: #27ae60; color: white; border: none; border-radius: 6px; font-size: 15px; cursor: pointer;">
+                Log In
+            </button>
+
+            <button type="submit" name="signup" 
+                    style="flex: 1; margin-left: 10px; padding: 12px; background-color: #2980b9; color: white; border: none; border-radius: 6px; font-size: 15px; cursor: pointer;">
+                Sign Up
+            </button>
+        </div>
+    </form>
+
+    {% if message %}
+        <p style="margin-top: 20px; color: #c0392b; font-weight: 500; font-family: 'Segoe UI', sans-serif;">
+            {{ message }}
+        </p>
+    {% endif %}
+
+</div>
+
+</body>

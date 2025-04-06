@@ -1,0 +1,74 @@
+{% include 'header.html' %}
+{% load static %}
+
+<body style="margin:0; padding:20px; font-family:'Segoe UI', Tahoma, sans-serif; background-color:#f0f4f8;">
+
+    <main style="max-width:1200px; margin:0 auto;">
+        <h1 style="text-align:center; color:#2c3e50; font-size:28px; margin-bottom:30px;">
+            Welcome to {{ role|title }} Home
+        </h1>
+
+        {% if role == 'teacher' %}
+        <div style="text-align:center; margin-bottom:40px;">
+            <a href="{% url 'examcreate' %}" 
+               style="background-color:#388e3c; color:white; padding:12px 24px; font-size:16px;
+                      text-decoration:none; border-radius:6px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+                Create New Exam
+            </a>
+        </div>
+        {% endif %}
+
+        <h2 style="text-align:center; color:#555; font-size:22px; margin-bottom:20px;">Your Exams</h2>
+
+        <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:24px;">
+
+            {% for exam in exams %}
+            <div style="background-color:#fff; padding:20px; border-radius:10px; 
+                        box-shadow:0 4px 12px rgba(0,0,0,0.08); width:300px;">
+
+                <h3 style="color:#1e3d59; margin-bottom:10px;">{{ exam.examname }}</h3>
+                <p style="color:#555; font-size:14px; margin-bottom:16px;">{{ exam.examabout }}</p>
+
+                <div style="display:flex; flex-direction:column; gap:10px;">
+
+                    {% if role == 'teacher' %}
+                    <a href="{% url 'markingschemecreate' id=exam.id %}" 
+                       style="background-color:#1976d2; color:white; padding:10px; text-align:center; 
+                              text-decoration:none; border-radius:5px;">
+                        Upload Marking Scheme
+                    </a>
+
+                    <a href="{% url 'singlemarkingschemeview' id=exam.id %}" 
+                       style="background-color:#0288d1; color:white; padding:10px; text-align:center; 
+                              text-decoration:none; border-radius:5px;">
+                        View Marking Scheme
+                    </a>
+                    {% endif %}
+
+                    <a href="{% url 'answersheetcreate' id=exam.id %}" 
+                       style="background-color:#f57c00; color:white; padding:10px; text-align:center; 
+                              text-decoration:none; border-radius:5px;">
+                        Add Answer Sheets
+                    </a>
+
+                    {% if role == 'teacher' %}
+                    <a href="{% url 'answersheetview' id=exam.id %}" 
+                       style="background-color:#ff9800; color:white; padding:10px; text-align:center; 
+                              text-decoration:none; border-radius:5px;">
+                        View Answer Sheets
+                    </a>
+
+                    <a href="{% url 'evaluateexam' id=exam.id %}" 
+                       style="background-color:#4caf50; color:white; padding:10px; text-align:center; 
+                              text-decoration:none; border-radius:5px;">
+                        Evaluate Exam
+                    </a>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+    </main>
+
+</body>

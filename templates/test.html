@@ -1,0 +1,31 @@
+{% include 'header.html' %}
+
+<h2 style="text-align:center; font-family:Arial, sans-serif; color:#2c3e50; margin:40px 0 30px;">
+     Evaluation Results
+</h2>
+
+<div style="max-width:900px; margin:0 auto; font-family:Arial, sans-serif;">
+
+    {% for r in result_data %}
+    <div style="background:#fff; border-radius:10px; padding:20px 25px;
+                margin-bottom:25px; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+
+        <h3 style="color:#34495e; margin-bottom:10px;">
+            {{ r.studentname }} <span style="color:#777;">({{ r.studentroll }})</span>
+        </h3>
+
+        <pre style="white-space:pre-wrap; color:#555; background-color:#f9f9f9; 
+                    padding:15px; border-radius:8px; font-family:'Courier New', monospace;
+                    margin-bottom:15px; border:1px solid #eee;">
+{{ r.content }}
+        </pre>
+
+        <a href="{{ r.file_url }}" download 
+           style="display:inline-block; background-color:#3498db; color:white; padding:10px 15px;
+                  text-decoration:none; border-radius:5px; font-size:14px;">
+            ⬇ Download Result File
+        </a>
+    </div>
+    {% endfor %}
+
+</div>

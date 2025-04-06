@@ -1,0 +1,27 @@
+{% include 'header.html' %}
+
+<div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-top: 30px; padding: 10px;">
+
+    {% for answersheet in answersheets %}
+    <div style="width: 320px; padding: 20px; background: #ffffff; border-radius: 12px; 
+                box-shadow: 0 4px 10px rgba(0,0,0,0.1); font-family: Arial, sans-serif; text-align: center; transition: transform 0.3s ease;">
+        
+        <h2 style="color: #2c3e50; margin-bottom: 8px;"> {{ answersheet.studentname }}</h2>
+        <h4 style="color: #7f8c8d; margin-bottom: 16px;"> Roll No: {{ answersheet.studentroll }}</h4>
+
+        <img src="{{ answersheet.answersheetpic.url }}" alt="Answer Sheet" 
+             style="max-width: 100%; height: auto; border-radius: 8px; 
+                    box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+
+        <a href="{{ answersheet.answersheetpic.url }}" download 
+           style="display:inline-block; margin-top:15px; padding:10px 16px; 
+                  background-color:#3498db; color:white; border:none; 
+                  border-radius:6px; text-decoration:none; font-size:15px; font-weight: bold;">
+             Download
+        </a>
+    </div>
+    {% empty %}
+        <p style="text-align:center; font-size:18px; color:#888;">No answer sheets uploaded yet.</p>
+    {% endfor %}
+
+</div>
