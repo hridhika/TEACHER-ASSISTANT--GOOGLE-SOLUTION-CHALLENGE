@@ -1,9 +1,9 @@
 
 
 ```markdown
-# 🎓 Teacher Assistant – Google Solution Challenge 2024
+# 🎓 Teacher Assistant – Google Solution Challenge 2025
 
-An AI-powered web platform built with Django and Google Generative AI to streamline exam evaluation — from uploading question papers to evaluating answer sheets and generating results. Developed as part of the **Google Solution Challenge 2024**.
+An AI-powered web platform built with Django and Google Generative AI to streamline exam evaluation — from uploading question papers to evaluating answer sheets and generating results. Developed as part of the **Google Solution Challenge 2025**.
 
 🌐 **Live App**: [https://agreed-merna-hridhika-fcb1b031.koyeb.app](https://agreed-merna-hridhika-fcb1b031.koyeb.app)
 
@@ -11,10 +11,10 @@ An AI-powered web platform built with Django and Google Generative AI to streaml
 
 ## ✨ Features
 
-- 🔐 **Role-Based Access** – Different interfaces for Teachers, Evaluators, and Students
-- 📄 **Question Paper Upload** – Teachers upload question files and keys
-- 📸 **Answer Sheet Upload** – Evaluators upload scanned sheets
-- 🤖 **Auto Evaluation** – AI marks answers using Google GenAI and Sentence Transformers
+- 🔐 **Role-Based Access** – Different interfaces for Teachers and Students
+- 📄 **Question Paper Upload** – Teachers upload question keys
+- 📸 **Answer Sheet Upload** –Students upload scanned sheets
+- 🤖 **Auto Evaluation** – AI marks answers using Google GenAI
 - 📥 **Result Download** – Download evaluated responses with marks
 - 🧠 **Minimal UI** – Clean, user-friendly design
 
@@ -23,10 +23,10 @@ An AI-powered web platform built with Django and Google Generative AI to streaml
 ## 🛠️ Tech Stack
 
 - **Backend:** Django (Python 3.12)
-- **AI/ML:** Google Generative AI, Sentence Transformers
+- **AI/ML:** Google Generative AI
 - **Frontend:** Django Templates (HTML/CSS)
 - **Image Processing:** Pillow
-- **Database:** SQLite / PostgreSQL
+- **Database:** PostgreSQL
 - **Deployment:** Koyeb + Gunicorn
 
 ---
@@ -86,7 +86,6 @@ Visit `http://127.0.0.1:8000` in your browser.
 Django
 google-generativeai
 pillow
-sentence-transformers
 psycopg2-binary
 gunicorn
 ```
@@ -98,11 +97,12 @@ gunicorn
 ## 📁 Project Structure
 
 ```
-├── core/                 # Django app logic
-├── templates/            # HTML template files
-├── media/                # Uploaded answer sheets/results
-├── static/               # CSS/JS assets
-├── Pipfile / requirements.txt
+├── media/
+├── Teacher/                 
+├── teacherassist/          
+├── templates/               
+├── User/               
+├── Pipfile / 
 └── manage.py
 ```
 
@@ -110,25 +110,17 @@ gunicorn
 
 ## 🚀 Future Enhancements
 
-- 🧑‍🎓 Student dashboard for results
-- 📊 Analytics for teachers
-- 📎 PDF export of reports
-- ✏️ AI feedback on answers
+-Manual Commenting Interface: Allow teachers to add notes/comments on specific student answers
+
+-Analytics Dashboard: Visual insights like average scores, top performers, etc.
+
+-Email Notifications: Notify students when results are published
 
 ---
 
 ## 🧑‍💻 Author
 
-Made with ❤️ by **Hridhika** for Google Solution Challenge 2024  
-GitHub: [@hridhika](https://github.com/hridhika)
+Made with ❤️ by **Anand, Hridhika, Raihan and Rishikesh** for Google Solution Challenge 2025
 
 ---
 
-## 📝 License
-
-This project is licensed under the [MIT License](LICENSE).
-```
-
----
-
-Let me know if you want to include screenshots, badges, or contributor credits! We can make this README even more aesthetic and impactful 🌟
