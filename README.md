@@ -3,7 +3,6 @@
 
 An AI-powered web platform built with Django and Google Generative AI to streamline exam evaluation — from uploading question papers to evaluating answer sheets and generating results. Developed as part of the **Google Solution Challenge 2025**.
 
-🌐 **Live App**: [https://agreed-merna-hridhika-fcb1b031.koyeb.app](https://agreed-merna-hridhika-fcb1b031.koyeb.app)
 
 ---
 
