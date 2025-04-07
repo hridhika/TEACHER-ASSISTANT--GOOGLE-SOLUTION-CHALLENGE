@@ -29,6 +29,29 @@ We've deployed it on koyeb, but the gemini api key we are using may get exhauste
 
 ---
 
+## Screenshots
+
+## Screenshots
+
+### 🧭 Login/Sign up page
+![Login/Signup Page](https://github.com/hridhika/TEACHER-ASSISTANT--GOOGLE-SOLUTION-CHALLENGE/blob/main/Screenshot%202025-04-07%20125051.png?raw=true)
+
+### 📚 Choose Role Teacher/Student
+![User Type](https://github.com/hridhika/TEACHER-ASSISTANT--GOOGLE-SOLUTION-CHALLENGE/blob/main/Screenshot%202025-04-07%20125113.png?raw=true)
+
+### 👩‍🏫 Marking Scheme Uploaded
+![Marking Sheets Uploaded](https://github.com/hridhika/TEACHER-ASSISTANT--GOOGLE-SOLUTION-CHALLENGE/blob/main/Screenshot%202025-04-07%20125135.png?raw=true)
+
+### 📊 Answers Scheme Uploaded
+![Answer Sheets Uploaded](https://github.com/hridhika/TEACHER-ASSISTANT--GOOGLE-SOLUTION-CHALLENGE/blob/main/Screenshot%202025-04-07%20125211.png?raw=true)
+
+### 📝 AI Evaluation Summary
+![AI Evaluation Summary](https://github.com/hridhika/TEACHER-ASSISTANT--GOOGLE-SOLUTION-CHALLENGE/blob/main/Screenshot%202025-04-07%20125216.png?raw=true)
+
+### 💬 Evaluation Results/ Download option
+![Download](https://github.com/hridhika/TEACHER-ASSISTANT--GOOGLE-SOLUTION-CHALLENGE/blob/main/Screenshot%202025-04-07%20125223.png?raw=true)
+
+
 ## 💻 Local Setup
 
 Follow the steps to run the project locally:
