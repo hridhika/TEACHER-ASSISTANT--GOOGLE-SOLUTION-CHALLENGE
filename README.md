@@ -3,6 +3,7 @@
 
 An AI-powered web platform built with Django and Google Generative AI to streamline exam evaluation — from uploading question papers to evaluating answer sheets and generating results. Developed as part of the **Google Solution Challenge 2025**.
 
+We've deployed it on koyeb, but the gemini api key we are using may get exhausted, so we are not providing the link here now, it is in the deck we submitted!
 
 ---
 
